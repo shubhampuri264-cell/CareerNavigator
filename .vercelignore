@@ -1,0 +1,31 @@
+# Ignore local development files
+backend/.venv
+backend/__pycache__
+frontend/node_modules
+frontend/.env.local
+
+# Ignore test files
+backend/tests
+frontend/src/**/*.test.js
+frontend/src/**/*.test.jsx
+
+# Ignore local environment files
+.env
+backend/.env
+frontend/.env
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore IDE files
+.vscode
+.idea
+*.swp
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,30 @@
+# FastAPI Framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# Database
+supabase>=2.5.0
+
+# Data Validation
+pydantic[email]==2.7.1
+pydantic-settings==2.2.1
+
+# Configuration
+python-dotenv==1.0.1
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# AI Integration
+google-genai>=1.0.0
+
+# Background Tasks
+apscheduler==3.10.4
+
+# Testing (dev only - not needed in production)
+pytest==8.2.0
+pytest-asyncio==0.23.6
+
+# Vercel Python Runtime Compatibility
+mangum==0.17.0
