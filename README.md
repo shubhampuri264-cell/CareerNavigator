@@ -353,34 +353,3 @@ Contributions are welcome! Please follow these guidelines:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-**Code Style:**
-- Python: Follow PEP 8, use `black` for formatting
-- JavaScript: Use ESLint configuration provided
-- Keep components small and focused
-- Write descriptive commit messages
-
----
-
-## License
-
-This project is open source and available under the MIT License.
-
----
-
-## Acknowledgments
-
-- **Google Gemini** for AI-powered career recommendations
-- **Supabase** for database and authentication infrastructure
-- **FastAPI** for the high-performance Python backend
-- **React + Vite** for the lightning-fast frontend
-- **Tailwind CSS** for beautiful, responsive UI
-
----
-
-## Contact & Support
-
-For questions, issues, or suggestions:
-- Open an issue on GitHub
-- Check existing documentation in `/backend/sql/` for database schema
-- Review API docs at `http://localhost:8000/api/docs` (development mode)
