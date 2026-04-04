@@ -9,22 +9,39 @@
       }
     },
     {
-      "src": "backend/main.py",
-      "use": "@vercel/python"
+      "src": "backend/vercel_app.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb",
+        "runtime": "python3.11"
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/main.py"
+      "dest": "backend/vercel_app.py"
+    },
+    {
+      "src": "/docs",
+      "dest": "backend/vercel_app.py"
+    },
+    {
+      "src": "/openapi.json",
+      "dest": "backend/vercel_app.py"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/dist/$1"
+      "dest": "/index.html"
     }
   ],
   "env": {
     "PYTHONPATH": "backend"
   },
-  "buildCommand": "cd frontend && npm install && npm run build"
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "installCommand": "cd frontend && npm install",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- backend/ frontend/"
 }
