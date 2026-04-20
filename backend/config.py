@@ -10,7 +10,10 @@ class Settings(BaseSettings):
 
     secret_key: str = "STUB_NOT_SET"
 
-    cors_origins: List[str] = ["http://localhost:5173", "https://career-navigator-one.vercel.app"]
+    cors_origins: List[str] = [
+        "http://localhost:5173",
+        "https://career-navigator-one.vercel.app",
+    ]
 
     # Email — SMTP (works with Gmail, Outlook, or any SMTP provider)
     # Gmail setup: enable 2FA → myaccount.google.com/apppasswords → create App Password
@@ -23,11 +26,13 @@ class Settings(BaseSettings):
     # Gemini AI
     gemini_api_key: str = "STUB_NOT_SET"
 
-    environment: str = "development"
+    environment: str = "production"
 
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
+        # pydantic-settings silently ignores a missing .env file,
+        # so Vercel (which injects env vars at OS level) works without one.
 
 
 @lru_cache()
