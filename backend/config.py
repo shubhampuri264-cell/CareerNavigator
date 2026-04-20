@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     secret_key: str = "STUB_NOT_SET"
 
-    cors_origins: List[str] = ["http://localhost:5173"]
+    cors_origins: List[str] = ["http://localhost:5173", "https://career-navigator-one.vercel.app"]
 
     # Email — SMTP (works with Gmail, Outlook, or any SMTP provider)
     # Gmail setup: enable 2FA → myaccount.google.com/apppasswords → create App Password
