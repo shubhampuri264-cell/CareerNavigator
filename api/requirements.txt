@@ -1,0 +1,10 @@
+fastapi==0.111.0
+supabase>=2.5.0
+pydantic[email]==2.7.1
+pydantic-settings==2.2.1
+python-dotenv==1.0.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+google-genai>=1.0.0
+apscheduler==3.10.4
+mangum==0.17.0
